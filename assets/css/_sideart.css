@@ -1,0 +1,202 @@
+/* modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  right: 0;
+  background-color: #000000aa;
+  backdrop-filter: blur(2px);
+  z-index: 9999999999;
+  color: white;
+}
+
+.modal.active {
+  display: grid;
+}
+
+.modal.active .modal__container {
+  animation: fadeIn 150ms ease-in forwards;
+  display: block;
+  width: 350px;
+  opacity: 1;
+  scale: 1;
+  position: absolute;
+  right: 0;
+  top: 12%;
+  height: 100%;
+  max-height: 600px;
+  overflow-y: hidden;
+}
+
+
+.modal.closing {
+  display: grid;
+}
+
+.modal.closing .modal__container {
+  animation: fadeOut 150ms ease-in forwards;
+}
+
+.modal__container {
+  width: 600px;
+  background-color: var(--white);
+  overflow: hidden;
+  opacity: 0;
+  scale: 0;
+  animation-fill-mode: forwards;
+}
+
+.modal__header {
+  padding: 16px;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal__header-title {
+  font-size: 26px;
+}
+
+.modal__header-close {
+  font-size: 28px !important;
+  color: var(--color-red) !important;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  justify-content: end;
+  top: -5px;
+}
+
+.modal__content {
+  font-weight: 300;
+  margin-inline: 24px;
+}
+
+.modal__content figure {
+  margin-right: 10px;
+}
+
+.modal__content figure img {
+  max-width: 95px;
+  max-height: 150px;
+}
+
+.modal_cart-description {
+  display: flex;
+  align-items: center;
+}
+
+.modal__content .cart_description h4 {
+  color: var(--clr-blue);
+  font-size: 18px;
+}
+
+.modal__content .cart_description p {
+  color: var(--clr-blue);
+  margin: 0;
+}
+
+
+#openModal {
+  display: flex;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-red);
+  padding: 0;
+  font-size: 14px;
+  border: 0;
+  position: relative;
+  box-sizing: border-box;
+  transition: all 500ms ease;
+  overflow: hidden;
+  font-weight: 600;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cart_description{
+  width: 100%;
+}
+
+.cart_description-product .qty{
+  justify-content: flex-start;
+}
+
+
+.cart_description-product .qty .input-text{
+  height: 30px;
+  width: 50px;
+}
+
+.cart_description-product .qty i{
+  cursor: pointer;
+  border: 1px solid #ccc;
+  line-height: 28px;
+  padding: 0 8px;
+}
+
+.box-poltronas_cart {
+  align-items: center;
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.box-poltronas_cart select{
+  border: none;
+  height: 35px;
+  width: 100%;
+}
+
+.box-poltronas_cart .assento{
+  height: 35px !important;
+}
+
+.box-assento-selecionados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-assento-selecionados div h3 {
+  margin-bottom: 0;
+  margin-right: 5px;
+  display: flex;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.box-assento-selecionados div h3 strong {
+  color: var(--color-red);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    scale: 1;
+  }
+
+  to {
+    opacity: 0;
+    scale: 0;
+  }
+}
