@@ -60,12 +60,70 @@
         </a>
 
         <?php if (isset($_SESSION['nome'])) { ?>
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" id="openModal" width="20" height="20" fill="#fff" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
-              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
-            </svg>
-            <span class="cart-qty">0</span>
-            </a>
+          <label for="cart">
+            <div id="btn-cart">
+              <svg xmlns="http://www.w3.org/2000/svg" id="openModal" width="20" height="20" fill="#fff" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+              </svg>
+              <span class="cart-qty">0</span>
+            </div>
+          </label>
+          <input type="checkbox" name="cart" id="cart">
+          <aside class="aside-cart">
+            <div class="aside-top">
+              <h4>Carrinho de Compras</h4>
+            </div>
+            <!-- produto -->
+            <div class="aside-content">
+              <figure>
+                <img src="./imagens/produtos/grande.png" alt="">
+              </figure>
+              <div class="cart-conteudo">
+                <p>Pipoca Pequena</p>
+                <span class="span_info">Categoria:<span class="span_result">Pipoca</span></span>
+                <span class="span_info">Preço: <span class="span_result">R$27,00</span></span>
+
+
+                <div class="qty">
+                  <label for="qty">Quantidade:</label>
+                  <button class="qtyminus" aria-hidden="true" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">-</button>
+                  <input type="number" name="qty" id="qty" min="1" max="10" step="1" value="1">
+                  <button class="qtyplus" aria-hidden="true" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- filmes -->
+            <div class="aside-content">
+              <figure>
+                <img src="./imagens/filmes/1.png" alt="">
+              </figure>
+              <div class="cart-conteudo">
+                <p>Nome do Filme</p>
+                <span class="span_info">Horário:<span class="span_result">13:00</span></span>
+                <span class="span_info">Data:<span class="span_result">02/11/2022</span></span>
+                <span class="span_info">Poltronas:<span class="span_result">E3,E4,E5</span></span>
+                <span class="span_info">Preço: <span class="span_result">Meia = 20 : Inteira = 40</span></span>
+              </div>
+            </div>
+
+            <!-- tipo de ingresso -->
+            <div class="select-wrapper">
+              <div class="assento selected"></div>
+              <select class="select">
+                <option value="" disabled selected>E3</option>
+                <option value="20">Meia Entrada</option>
+                <option value="40">Inteira</option>
+              </select>
+            </div>
+        
+
+            <!-- finalizar -->
+            <div class="box_btn-cart"> 
+              <a href="selecao-pagamento.php" class="animated-button finish_cart">Finalizar Carrinho</a> 
+            </div>
+
+          </aside>
         <?php } ?>
       </div>
     </div>

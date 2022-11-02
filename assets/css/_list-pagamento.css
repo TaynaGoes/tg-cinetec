@@ -1,0 +1,10 @@
+.item-pagamento, 
+.item-pagamento h3,
+.item-total{
+    color: #fff;
+}
+
+.item-pagamento img{
+    width: 180px;
+    height: 200px;
+}

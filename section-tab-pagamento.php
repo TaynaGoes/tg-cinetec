@@ -1,15 +1,30 @@
 <div class="content-section-pagamento">
     <div class="box-info-pedido">
-        <h4 style="color: red">Informações do pedido</h4>
-        <span>Nome Filme: XXXXXX</span>
-        <img style=" width: 100px; heigth: 100px; display: block;" src="https://2.bp.blogspot.com/-TOCRLYBV3N4/UsbbAXBZmkI/AAAAAAAAPuM/DbPHOcuv6HA/s1600/A-Menina-Que-Roubava-Livros-capa-filme-1.jpg" alt="">
-        
-        <!-- aqui qnd mostrar as poltronas ai sim vai pedir pra falar qual e inteira e qual e meia (o modal que tem la em poltronas "ver poltronas selecionadas")
-        ele sai de la e depois que ja confirmou na hora de pagar e onde vai apagar se e meia ou inteira -->
-        <span>Poltronas Selecionadas </span>
-        <br> <br>
-        <span>Pipoca 3</span>
-        <span>Refrigerante 2</span>
+       <ul class="list-pagamento">
+        <li class="item-pagamento">
+            <figure>
+                <img src="./imagens/filmes/1.png" alt="">
+            </figure>
+            <h3>Nome do Filme</h3>
+            <p>Sinopse</p>
+            <p>preço</p>
+            <p>Horario</p>
+            <p>Data</p>
+            <p>Ingressos: </p>
+        </li>
+        <li class="item-pagamento">
+            <figure>
+                <img src="./imagens/produtos/grande.png" alt="">
+            </figure>
+            <h3>Produto</h3>
+            <p>Categoria</p>
+            preço
+        </li>
+       </ul>
+       <div class="item-total">
+        <p>Total</p>
+        <p>R$</p>
+       </div>
     </div>
     <div class="checkout">
         <div class="credit-card-box">
