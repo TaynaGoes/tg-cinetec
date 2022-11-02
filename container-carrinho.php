@@ -59,5 +59,6 @@
                 </div>
             </div>
         </div>
+        <a href="">Finalizar carrinho</a>
     </div>
 </div>
